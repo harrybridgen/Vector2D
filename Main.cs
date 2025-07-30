@@ -3,9 +3,9 @@
 public class Program {
     static void Main(String[] args) {
         Vector2D vector = new Vector2D(1.0, 1.0);
-        Console.WriteLine(vector.getMagnitude());
-        vector.normalize();
-        Console.WriteLine(vector.getMagnitude());
+        Console.WriteLine(vector.GetMagnitude());
+        vector.Normalize();
+        Console.WriteLine(vector.GetMagnitude());
     }
 }
 
@@ -18,32 +18,32 @@ public class Vector2D {
     private double x;
     private double y;
 
-    public double getX() {
+    public double GetX() {
         return this.x;
     }
 
-    public double getY() {
+    public double GetY() {
         return this.y;
     }
 
-    public void setX(double x) {
+    public void SetX(double x) {
         this.x = x;
     }
 
-    public void setY(double y) {
+    public void SetY(double y) {
         this.y = y;
     }
 
-    public void normalize() {
-        double x = this.getX();
-        double y = this.getY();
-        double magnitude = this.getMagnitude();
+    public void Normalize() {
+        double x = this.GetX();
+        double y = this.GetY();
+        double magnitude = this.GetMagnitude();
         if (magnitude == 0) return;
-        this.setX(x / magnitude);
-        this.setY(y / magnitude);
+        this.SetX(x / magnitude);
+        this.SetY(y / magnitude);
     }
 
-    public double getMagnitude() {
-        return Math.Sqrt((this.getX() * this.getX()) + (this.getY() * this.getY()));
+    public double GetMagnitude() {
+        return Math.Sqrt((this.GetX() * this.GetX()) + (this.GetY() * this.GetY()));
     }
 }
